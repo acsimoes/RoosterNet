@@ -4,7 +4,7 @@ CC=gcc
 OPT = -O0
 
 #Other Flags
-CFLAGS = $(OPT) -Wall -g -std=c++11
+CFLAGS = $(OPT) -Wall -g
 
 #SFML
 LIBS =
@@ -32,15 +32,12 @@ RoosterNetClient: RoosterNetClient.o
 
 RoosterNetServer: RoosterNetServer.o
 	$(CC) $(CFLAGS) $(SPATH) RoosterNetServer.o -o RoosterNetServer $(LIBS)
-
-.cpp.o:
-	$(CC) $(CFLAGS) $(SPATH) -c $*.cpp -o $*.o
-
+	
 .c.o:
 	$(CC) $(CFLAGS) -c $*.c -o $*.o
 	
 clean:
-	rm src/*.o $(PROG) test
+	rm *.o RoosterNetClient RoosterNetServer
 remove:
 	rm 
 depend:
