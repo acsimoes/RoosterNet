@@ -1,2 +1,5 @@
-# RoosterNet
-Tic Tac Toe over the internet using TCP sockets
+Academic Project:
+
+Simple implementation of the famous Tic-Tac-Toe game using TCP sockets.
+
+Developed in Ubuntu, using the C language.
